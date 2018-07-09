@@ -54,7 +54,6 @@ Greeting.propTypes = {
     }
   }
 }
-
 // console.log(Greeting());
 
 
@@ -84,7 +83,7 @@ console.log(Table())
 console.log(Data());
     
 // ReactDOM.render(<Book />, document.getElementById('root'));
-ReactDOM.render(<Greeting username="Kevin"/>, document.getElementById('root'));
+// ReactDOM.render(<Greeting username="Kevin"/>, document.getElementById('root'));
 // ReactDOM.render(<Table />, document.getElementById('root'));
 // ReactDOM.render(<Data />, document.getElementById('root'));
 
