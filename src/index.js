@@ -32,9 +32,22 @@ function Book() {
         </li>
       </ul> 
   </div>
-
   )
 }
+console.log(Book());
+
+
+function Greeting() {
+  return (
+    <React.Fragment >
+      <div>
+        Hello {} 
+      </div>
+    </React.Fragment>
+  )
+}
+console.log(Greeting());
+
 
 function Table() {
   return (
@@ -48,6 +61,7 @@ function Table() {
   );
 }
 
+
 function Data() {
   return (
     <React.Fragment>
@@ -57,8 +71,11 @@ function Data() {
     </React.Fragment>
   );
 }  
-    // console.log(MyThing())
+console.log(Table())
+console.log(Data());
     
-    
-ReactDOM.render(<Book />, document.getElementById('root'));
+// ReactDOM.render(<Book />, document.getElementById('root'));
+// ReactDOM.render(<Greeting />, document.getElementById('root'));
+// ReactDOM.render(<Table />, document.getElementById('root'));
+// ReactDOM.render(<Data />, document.getElementById('root'));
 
