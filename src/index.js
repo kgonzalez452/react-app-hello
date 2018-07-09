@@ -37,16 +37,25 @@ function Book() {
 console.log(Book());
 
 
-function Greeting() {
+function Greeting(props) {
   return (
     <React.Fragment >
-      <div>
-        Hello {} 
-      </div>
+        Hello {props.username}
     </React.Fragment>
   )
 }
-console.log(Greeting());
+
+Greeting.propTypes = {
+  // propType components 
+  username(props, propName, componentName) {
+    if (typeof props[propName] != 'string') {
+      return new Error(`Hey you should have passed a string for ${propName}
+    in ${componentName}, but you passed a ${typeof props[propName]}!`);
+    }
+  }
+}
+
+// console.log(Greeting());
 
 
 function Table() {
@@ -75,7 +84,7 @@ console.log(Table())
 console.log(Data());
     
 // ReactDOM.render(<Book />, document.getElementById('root'));
-// ReactDOM.render(<Greeting />, document.getElementById('root'));
+ReactDOM.render(<Greeting username="Kevin"/>, document.getElementById('root'));
 // ReactDOM.render(<Table />, document.getElementById('root'));
 // ReactDOM.render(<Data />, document.getElementById('root'));
 
